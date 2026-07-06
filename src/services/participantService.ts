@@ -474,3 +474,13 @@ export const getSolutionWithEntityStatus = async (solutions: any[], participantI
     })
   );
 }
+
+export const getProjectDetails = async (projectId: string): Promise<any> => {
+  try {
+    const response = await api.post(API_ENDPOINTS.PROJECT_DETAILS(projectId));
+    return response.data.result;
+  } catch (error) {
+    logger.error('Failed to fetch project details', { projectId, error });
+    throw error;
+  }
+}

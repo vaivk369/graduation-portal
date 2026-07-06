@@ -34,4 +34,5 @@ export const API_ENDPOINTS = {
   PROGRAM_USERS_SEARCH: `${prefix}/project/v1/programUsers/search`, // Search program users (LCs, participants, etc.),
   UPDATE_ENTITY:`${prefix}/project/v1/programUsers/updateEntityProfile`,
   GENERATE_CERTIFICATE: (projectId: string) => `${prefix}/project/v1/userProjects/update/${projectId}`,
+  PROJECT_DETAILS: (id: string) => `${prefix}/project/v1/userProjects/details/${id}`
 };
